@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 export const SimpleHoc = (WrappedComponent) => {
-    alert('HOC');
+    console.log('HOC');
     return class extends Component {
 
         handleClick = () => {

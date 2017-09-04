@@ -6,6 +6,7 @@ import WillDo from './whatTodo/index'
 import EditTable from './Table/EditTable';
 import ReactDomEvent from './react/react-ref'
 import {MakeRoomCard} from './form/form';
+import TodoList from './todoList/TodoList';
 import 'antd/dist/antd.css';
 import './App.css'
 
@@ -42,6 +43,10 @@ export default class SideMenu extends Component {
                                 antd form
                                 <Link to="/antd-form"/>
                             </Menu.Item>
+                            <Menu.Item key="1-6">
+                                Moke TodoList
+                                <Link to="/moke-todolist"/>
+                            </Menu.Item>
                         </SubMenu>
                     </Menu>
                 </div>
@@ -51,6 +56,7 @@ export default class SideMenu extends Component {
                     <Route path="/antd-table" component={EditTable}/>
                     <Route path="/react-dom" component={ReactDomEvent}/>
                     <Route path="/antd-form" component={MakeRoomCard}/>
+                    <Route path="/moke-todolist" component={TodoList}/>
                 </div>
             </div>
         </Router>

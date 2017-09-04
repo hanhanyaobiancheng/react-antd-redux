@@ -21,14 +21,12 @@
 # install dependencies
 $ yarn
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:9000
 yarn start
 
 # build for production with minification
-yarn run build
+yarn build
 
-# clear cache 如果发现源码与webpack编译文件明显不一致，有可能是缓存脏数据
-yarn run clear-cache
 
 ```
 

@@ -17,15 +17,15 @@ export class MakeRoomCard extends Component {
     render() {
         const {getFieldDecorator} = this.props.form;
         const Layout = {
-            wrapperCol: {span: 8},
-            labelCol: {span: 1},
+            wrapperCol: {span: 6},
+            labelCol: {span: 3},
         };
         return (
             <Form>
                 <FormItem
                     label="房间号"
-                    wrapperCol={{span: 8}}
-                    labelCol={{span: 1}}
+                    wrapperCol={{span: 6}}
+                    labelCol={{span: 3}}
                 >
                     {getFieldDecorator('roomNo', {
                     })(
@@ -33,8 +33,8 @@ export class MakeRoomCard extends Component {
                     )}
                 </FormItem>
                 <FormItem
-                    wrapperCol={{span: 5}}
-                    labelCol={{span: 1}}
+                    wrapperCol={{span: 6}}
+                    labelCol={{span: 3}}
                     label="入住时间"
                 >
                     <div>
@@ -69,6 +69,18 @@ export class MakeRoomCard extends Component {
                     label="门锁房号"
                 >
                     <span>123</span>
+                </FormItem>
+                <FormItem
+                    label="正数"
+                    {...Layout}
+                >
+                    {getFieldDecorator('number', {
+                        rules: [
+                            {pattern: /^(([0]?)|([1-9]+))\.?\d+$/, message: '请输入正数'}
+                        ]
+                    })(
+                        <Input placeholder="正数可以有小数"/>
+                    )}
                 </FormItem>
             </Form>
         );

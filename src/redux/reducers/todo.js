@@ -25,7 +25,7 @@ const todos = (state, action) => {
             ];
         case 'TOGGLE_TODO':
             return state.map(item => todo(item, action));
-        default: return state;
+        default: return [];
     }
 };
 
