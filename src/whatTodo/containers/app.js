@@ -41,7 +41,7 @@ App.propTypes = {
         'SHOW_COMPLETED',
         'SHOW_ACTIVE'
     ]).isRequired
-}
+};
 
 function selectTodos(todos, filter) {
     switch (filter) {
@@ -51,6 +51,7 @@ function selectTodos(todos, filter) {
             return todos.filter(todo => todo.completed);
         case VisibilityFilters.SHOW_ACTIVE:
             return todos.filter(todo => !todo.completed);
+        default: return;
     }
 }
 
