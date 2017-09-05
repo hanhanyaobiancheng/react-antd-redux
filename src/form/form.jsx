@@ -82,6 +82,31 @@ export class MakeRoomCard extends Component {
                         <Input placeholder="正数可以有小数"/>
                     )}
                 </FormItem>
+                {/** 注意正则限制位数的时候必须要以^开头，以$结尾 */}
+                <FormItem
+                    label="位数限制"
+                    {...Layout}
+                >
+                    {getFieldDecorator('num', {
+                        rules: [
+                            {pattern: /^([0-9a-z]){6}$/, message: '请输入六位字母与数字'}
+                        ]
+                    })(
+                        <Input placeholder="通过正则控制位数"/>
+                    )}
+                </FormItem>
+                <FormItem
+                    label="名称"
+                    {...Layout}
+                >
+                    {getFieldDecorator('name', {
+                        rules: [
+                            {pattern: /(^\s*)|(\s*$)/, message: '名称首尾不能有空格'},
+                        ]
+                    })(
+                        <Input placeholder="名称首尾不能有空格"/>
+                    )}
+                </FormItem>
             </Form>
         );
     }
