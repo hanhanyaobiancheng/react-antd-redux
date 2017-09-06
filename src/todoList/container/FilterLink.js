@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import Link from '../components/Link';
-import {setVisibility} from '../../redux/actions/index'
+import {setVisibility} from '../../redux/actions/mock-actions/index'
 
 const mapStateToProps = (state, ownProps) => {
     return {

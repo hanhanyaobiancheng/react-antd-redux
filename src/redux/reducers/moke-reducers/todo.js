@@ -15,8 +15,11 @@ const todo = (state, action) => {
         default: return state;
     }
 };
-
-const todos = (state, action) => {
+/**  注意此处default默认返回state，
+ *   当页面没有li项的时候，state的值是undefined，
+ *   需要给state默认值[],否则会报错
+ */
+const todos = (state = [], action) => {
     switch (action.type) {
         case 'ADD_TODO':
             return [
@@ -25,7 +28,7 @@ const todos = (state, action) => {
             ];
         case 'TOGGLE_TODO':
             return state.map(item => todo(item, action));
-        default: return [];
+        default: return state;
     }
 };
 

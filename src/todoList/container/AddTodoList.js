@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import {Form, Input, Button} from 'antd';
+import {Form, Input, Button, Row, Col} from 'antd';
 import {connect} from 'react-redux';
-import {addTodo} from '../../redux/actions/index';
+import {addTodo} from '../../redux/actions/mock-actions/index';
 
 const FormItem = Form.Item;
 
-@connect()
 @Form.create()
+@connect()
 export default class AddTodoList extends Component {
     state = {
         inputValue: '',
@@ -20,11 +20,11 @@ export default class AddTodoList extends Component {
         e.preventDefault();
         const {dispatch} = this.props;
         this.props.form.validateFields(err => {
-            if(!err) {
+            if(!err){
                 dispatch(addTodo(this.state.inputValue));
             }
             this.setState({inputValue: ''})
-        });
+        })
     };
 
     render() {
@@ -32,19 +32,26 @@ export default class AddTodoList extends Component {
         return (
             <div>
                 <Form onSubmit={this.handleSubmit}>
-                    <FormItem>
-                        <Input
-                            value={inputValue}
-                            onChange={this.handleChange}
-                            ref={node => this.input = node}
-                        />
-                    </FormItem>
-                    <FormItem>
-                        <Button htmlType="submit" onClick={this.handleSubmit}>AddTodo</Button>
-                    </FormItem>
+                    <Row>
+                        <Col span={8}>
+                            <FormItem>
+                                <Input
+                                    value={inputValue}
+                                    onChange={this.handleChange}
+                                />
+                            </FormItem>
+                        </Col>
+                        <Col span={8}>
+                            <FormItem>
+                                <Button htmlType="submit" onClick={this.handleSubmit}>AddTodo</Button>
+                            </FormItem>
+                        </Col>
+                    </Row>
                 </Form>
             </div>
         );
     }
 }
+
+
 

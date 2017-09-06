@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class Todo extends Component {
 
-    static defaultProps = {
-        onClick: () => {},
-    };
-
     static propTypes = {
         onClick: PropTypes.func.isRequired,
         completed: PropTypes.bool.isRequired,
@@ -17,6 +13,7 @@ export default class Todo extends Component {
 
     render() {
         const {completed, text} = this.props;
+        console.log(text);
         return (
             <li
                 onClick={this.props.onClick}

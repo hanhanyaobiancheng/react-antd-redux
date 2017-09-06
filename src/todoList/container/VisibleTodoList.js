@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { toggleTodo } from '../../redux/actions';
+import { toggleTodo } from '../../redux/actions/mock-actions/index';
 import TodoList from '../components/TodoList';
 
 const getVisibleTodos = (todos, filter) => {
@@ -11,13 +11,13 @@ const getVisibleTodos = (todos, filter) => {
 
         case 'SHOW_ACTIVE':
             return todos.filter(item => !item.completed);
-        default: return;
+        default: return todos;
     }
 };
 
 const mapStateToProps = (state) => {
     return {
-        todos: getVisibleTodos(state.todos, state.visiblityFilter),
+        todos: getVisibleTodos(state.todos, state.visibilityFilter),
     }
 };
 

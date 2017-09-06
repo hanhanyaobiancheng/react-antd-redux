@@ -15,15 +15,18 @@ export default class TodoList extends Component {
     };
 
     render() {
-        const {todos = []} = this.props;
+        const {todos} = this.props;
+        console.log(todos);
         return (
             <ul>
                 {
-                    todos.map(item => <Todo
-                        key={item.id}
-                        {...item}
-                        onClick={() => this.props.onTodoClick(item.id)}
-                    />)
+                    todos.map(item =>
+                        <Todo
+                            key={item.id}
+                            {...item}
+                            onClick={() => this.props.onTodoClick(item.id)}
+                        />
+                    )
                 }
             </ul>
         );
