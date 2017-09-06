@@ -1,24 +1,50 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {Form, Input, Button} from 'antd';
 import {connect} from 'react-redux';
 import {addTodo} from '../../redux/actions/index';
 
-let AddTodoList = ({dispatch}) => {
-    let input;
-    return (
-        <div>
-            <form onSubmit={e => {
-                e.preventDefault();
-                if(!input.value.trim()) return;
-                dispatch(addTodo(input.value));
-                input.value = '';
-            }}>
-                <input ref={node => input = node}/>
-                <button type="submit">AddTodo</button>
-            </form>
-        </div>
-    )
-};
+const FormItem = Form.Item;
 
-AddTodoList = connect()(AddTodoList);
+@connect()
+@Form.create()
+export default class AddTodoList extends Component {
+    state = {
+        inputValue: '',
+    };
 
-export default AddTodoList;
+    handleChange = (e) => {
+        this.setState({inputValue: e.target.value});
+    };
+
+    handleSubmit = (e) => {
+        e.preventDefault();
+        const {dispatch} = this.props;
+        this.props.form.validateFields(err => {
+            if(!err) {
+                dispatch(addTodo(this.state.inputValue));
+            }
+            this.setState({inputValue: ''})
+        });
+    };
+
+    render() {
+        const {inputValue} = this.state;
+        return (
+            <div>
+                <Form onSubmit={this.handleSubmit}>
+                    <FormItem>
+                        <Input
+                            value={inputValue}
+                            onChange={this.handleChange}
+                            ref={node => this.input = node}
+                        />
+                    </FormItem>
+                    <FormItem>
+                        <Button htmlType="submit" onClick={this.handleSubmit}>AddTodo</Button>
+                    </FormItem>
+                </Form>
+            </div>
+        );
+    }
+}
+
