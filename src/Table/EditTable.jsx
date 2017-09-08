@@ -84,7 +84,7 @@ export default class EditTable extends Component {
                 </Button>
                 <Table
                     columns={this.columns}
-                    dataSource={[{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819 09:00', key: '1', id: '1344'}]}
+                    dataSource={[{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819', key: '1', id: '1344'}]}
                 />
                 <div>
                     <Popconfirm

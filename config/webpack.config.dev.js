@@ -138,7 +138,7 @@ module.exports = {
         exclude: [
           /\.html$/,
           /\.(js|jsx)$/,
-          /\.(css|less)$/,
+          /\.css$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -180,7 +180,7 @@ module.exports = {
       // In production, we use a plugin to extract that CSS to a file, but
       // in development "style" loader enables hot editing of CSS.
       {
-        test: /\.(css|less)$/,
+        test: /\.css$/,
         use: [
           require.resolve('style-loader'), // style-loader是为了使css嵌入到html中
           {

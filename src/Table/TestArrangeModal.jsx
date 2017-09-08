@@ -105,17 +105,21 @@ export default class TestArrangeModal extends Component {
                             <DatePicker placeholder="请选择时间"/>
                         )}
                     </FormItem>
-                    <Button
-                        htmlType="submit"
-                        onClick={this.handleModalSubmit}
-                    >
-                        确定
-                    </Button>
-                    <Button
-                        onClick={this.props.form.resetFields()}
-                    >
-                        重置
-                    </Button>
+                    <div style={{marginLeft: '81.33px'}}>
+                        <Button
+                            type="primary"
+                            htmlType="submit"
+                            onClick={this.handleModalSubmit}
+                            style={{marginRight: '8px'}}
+                        >
+                            确定
+                        </Button>
+                        <Button
+                            onClick={() => this.props.form.resetFields()}
+                        >
+                            重置
+                        </Button>
+                    </div>
                 </Form>
             </Modal>
         );
