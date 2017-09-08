@@ -1,18 +1,23 @@
 import React, {Component} from 'react';
-import {Table, Popconfirm} from 'antd';
+import {Table, Popconfirm, Button} from 'antd';
 import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
+import TestArrangeModal from './TestArrangeModal';
 
 @SimpleHoc
 export default class EditTable extends Component {
-    state = {};
+    state = {
+        testArrangeModalVisible: false,
+        testArrangeModalData: {},
+    };
 
     componentDidMount() {
+        let classNameArr = [];
         document.addEventListener('mouseover', e => {
             e.preventDefault();
             const target = e.target || e.srcElement;
             const className = target.getAttribute('class');
-            console.log(className);
+            classNameArr.push(className);
         })
     }
 
@@ -35,15 +40,51 @@ export default class EditTable extends Component {
                 />
             )
         },
-        ];
+        {
+            title: '操作',
+            key: 'operator',
+            render: (text, record) => (
+                <span>
+                    <a
+                        onClick={() => this.setState({
+                            testArrangeModalVisible: true,
+                            testArrangeModalData: record,
+                        })}
+                    >
+                        编辑
+                    </a>
+                    <a
+                        style={{marginLeft: '5px', color: 'red'}}
+                    >
+                        删除
+                    </a>
+                </span>
+            )
+        },
+    ];
+
+    handleTestArrangeModalSubmit = (values) => {
+        console.log(values);
+    };
 
     render() {
         console.log(this.props.say);
+        const {testArrangeModalVisible, testArrangeModalData} = this.state;
+        const title = testArrangeModalData.id ? `修改${testArrangeModalData.classRoom}` : '添加';
         return (
             <div>
+                <Button
+                    type="primary"
+                    onClick={() => {this.setState({
+                        testArrangeModalVisible: true,
+                        testArrangeModalData: {},
+                    })}}
+                >
+                    添加
+                </Button>
                 <Table
                     columns={this.columns}
-                    dataSource={[{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819', key: '1'}]}
+                    dataSource={[{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819 09:00', key: '1', id: '1344'}]}
                 />
                 <div>
                     <Popconfirm
@@ -52,9 +93,16 @@ export default class EditTable extends Component {
                     >
                         <a
                             onClick={this.props.handleClick}
-                        >123</a>
+                        >高阶组件123</a>
                     </Popconfirm>
                 </div>
+                <TestArrangeModal
+                    title={title}
+                    visible={testArrangeModalVisible}
+                    data={testArrangeModalData}
+                    onSubmit={this.handleTestArrangeModalSubmit}
+                    onCancel={() => this.setState({testArrangeModalVisible: false})}
+                />
             </div>
         );
     }

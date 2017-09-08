@@ -36,7 +36,12 @@ export class Test extends Component {
                         data.map(item => <Option value={item.value} key={item.key}>{item.label}</Option>)
                     }
                 </Select>
-                <h2>表单的验证</h2>
+                <Select style={{width: '100px'}} allowClear={true}>
+                    {
+                        data.map(item => <Option value={item.value} key={item.key} disabled={item === '3个咸鸭蛋'}>{item.label}</Option>)
+                    }
+                </Select>
+                <h3>表单的验证</h3>
                 <Form
                     style={{width: '300px'}}
                 >

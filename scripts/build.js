@@ -16,7 +16,7 @@ require('../config/env');
 
 const path = require('path');
 const chalk = require('chalk');
-const fs = require('fs-extra');
+const fs = require('fs-extra'); // node中的模块，对文件的处理，复制文件，创建文件，移动、写入、删除文件等
 const webpack = require('webpack');
 const config = require('../config/webpack.config.prod');
 const paths = require('../config/paths');
@@ -54,6 +54,7 @@ measureFileSizesBeforeBuild(paths.appBuild)
   .then(
     ({ stats, previousFileSizes, warnings }) => {
       if (warnings.length) {
+        // chalk的作用是在控制台输出不同颜色的文字，只能改变命令行中的字体颜色
         console.log(chalk.yellow('Compiled with warnings.\n'));
         console.log(warnings.join('\n\n'));
         console.log(

@@ -86,10 +86,11 @@ export class MakeRoomCard extends Component {
                         >
                             {getFieldDecorator('number', {
                                 rules: [
-                                    {pattern: /^(([0]?)|([1-9]+))\.?\d+$/, message: '请输入正数'}
+                                    {max: 12, message: '不能超过12位'},
+                                    {pattern: /^0$|[1-9]+(\.\d+)?\d*$/, message: '请输入正数'}
                                 ]
                             })(
-                                <Input placeholder="正数可以有小数"/>
+                                <Input placeholder="请输入正数，可以有小数，不超过12位"/>
                             )}
                         </FormItem>
                     </Col>
