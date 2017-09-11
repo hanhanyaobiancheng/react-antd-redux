@@ -26,7 +26,6 @@ export default class TestArrangeModal extends Component {
 
     componentWillReceiveProps(nextProps) {
         const {visible} = nextProps;
-        console.log(visible);
         if (!visible) {
             this.props.form.resetFields();
         }

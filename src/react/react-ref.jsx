@@ -11,7 +11,6 @@ export default class ReactEventDom extends Component {
             const target = e.target || e.srcElement;
             const className = target.getAttribute('class');
             if (className === 'p') {
-                console.log(this);
                 // this.text.classList.value = 'p-color';
             }
         });
@@ -24,7 +23,7 @@ export default class ReactEventDom extends Component {
     }
 
     handleClick = () => {
-        this.text.style.background = 'red';
+        this.text.style.background = this.text.style.background === 'red' ? 'green' : 'red' ;
     };
 
     render() {
@@ -38,6 +37,7 @@ export default class ReactEventDom extends Component {
                 >
                     hello
                 </p>
+                {/** 高阶组件方法测试 */}
                 <a
                     onClick={this.props.handleClick}
                 >测试高阶组件</a>

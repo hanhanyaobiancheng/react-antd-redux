@@ -7,19 +7,39 @@ import EditTable from './Table/EditTable';
 import ReactDomEvent from './react/react-ref'
 import {MakeRoomCard} from './form/form';
 import TodoList from './todoList/TodoList';
+import {getWindowSize} from './commons/GetWindowSize';
 import 'antd/dist/antd.css';
 import './App.css'
 
 const SubMenu = Menu.SubMenu;
 
 export default class SideMenu extends Component {
+    state = {
+        windowHeight: '700px',
+    };
+
+    handleWindowResize = () => {
+        this.setState({windowHeight: getWindowSize().height});
+    };
+
+    componentDidMount() {
+        // 当浏览器控制台呼出以后，刷新页面左侧导航的高度会随着浏览器窗口高度的变化而变化
+        window.addEventListener('resize', this.handleWindowResize);
+    }
+
+    componentWillUnmount() {
+        // 组件卸载的时候解除事件监听
+        window.removeEventListener('resize', this.handleWindowResize);
+    }
+
     render () {
+        const {windowHeight} = this.state;
         return (
         <Router>
             <div>
                 <div className="menu">
                     <Menu
-                        style={{width:240,height:window.innerHeight}}
+                        style={{width:240,height: windowHeight}}
                         mode="inline"
                     >
                         <SubMenu key="1" title={<sapn><Icon type="mail"/><span>redux</span></sapn>}>

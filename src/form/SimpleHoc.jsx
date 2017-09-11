@@ -9,6 +9,7 @@ export const SimpleHoc = (WrappedComponent) => {
         };
 
         render() {
+            console.log(this.props);
             return (
                 <WrappedComponent {...this.props} handleClick={this.handleClick}/>
             );
