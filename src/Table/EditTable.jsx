@@ -30,6 +30,7 @@ export default class EditTable extends Component {
         {title:'教师', dataIndex: 'teacher', key: 'teacher'},
         {title:'科目', dataIndex: 'course', key: 'course'},
         {
+            width: '30%',
             title:'时间',
             dataIndex: 'time',
             key: 'time',
