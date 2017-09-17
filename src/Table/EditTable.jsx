@@ -9,6 +9,7 @@ export default class EditTable extends Component {
     state = {
         testArrangeModalVisible: false,
         testArrangeModalData: {},
+        dataSource: [{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819', key: '1', id: '1344'}],
     };
 
     componentDidMount() {
@@ -54,11 +55,16 @@ export default class EditTable extends Component {
                     >
                         编辑
                     </a>
-                    <a
-                        style={{marginLeft: '5px', color: 'red'}}
+                    <Popconfirm
+                        title={`确定要删除${record.classRoom}教室吗`}
+                        onConfirm={() => {this.setState({dataSource: []})}}
                     >
-                        删除
-                    </a>
+                        <a
+                            style={{marginLeft: '5px', color: 'red'}}
+                        >
+                            删除
+                        </a>
+                    </Popconfirm>
                 </span>
             )
         },
@@ -70,7 +76,7 @@ export default class EditTable extends Component {
 
     render() {
         // console.log(this.props.say); // 测试高阶组件@SimpleHOC中封装的方法
-        const {testArrangeModalVisible, testArrangeModalData} = this.state;
+        const {testArrangeModalVisible, testArrangeModalData, dataSource} = this.state;
         const title = testArrangeModalData.id ? `修改${testArrangeModalData.classRoom}` : '添加';
         return (
             <div>
@@ -85,7 +91,7 @@ export default class EditTable extends Component {
                 </Button>
                 <Table
                     columns={this.columns}
-                    dataSource={[{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819', key: '1', id: '1344'}]}
+                    dataSource={dataSource}
                 />
                 <div>
                     <Popconfirm
