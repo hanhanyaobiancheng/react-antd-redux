@@ -23,13 +23,14 @@ export default class ReactEventDom extends Component {
         };
         const data = (data) => {
             console.log(data);};
-        Pubsub.subscribe('test','123', data)
-        Pubsub.subscribe('test', '55', data)
-        Pubsub.subscribe('test', '66', data)
+        Pubsub.subscribe('test','123', data);
+        Pubsub.subscribe('test', '55', data);
+        Pubsub.subscribe('test', '66', data);
     }
 
     handleClick = () => {
         this.text.style.background = this.text.style.background === 'red' ? 'green' : 'red' ;
+        console.log(window.location);
     };
 
     render() {

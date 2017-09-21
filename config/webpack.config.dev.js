@@ -139,6 +139,7 @@ module.exports = {
           /\.html$/,
           /\.(js|jsx)$/,
           /\.css$/,
+            /\.less$/,
           /\.json$/,
           /\.bmp$/,
           /\.gif$/,
@@ -173,6 +174,40 @@ module.exports = {
           // directory for faster rebuilds.
           cacheDirectory: true,
         },
+      },
+      {
+          test: /\.less/,
+          use: [
+              'style-loader',
+              'css-loader',
+              {
+                  loader: require.resolve('postcss-loader'),
+                  options: {
+                      // Necessary for external CSS imports to work
+                      // https://github.com/facebookincubator/create-react-app/issues/2677
+                      ident: 'postcss',
+                      plugins: () => [
+                          require('postcss-flexbugs-fixes'),
+                          autoprefixer({
+                              browsers: [
+                                  '>1%',
+                                  'last 4 versions',
+                                  'Firefox ESR',
+                                  'not ie < 9', // React doesn't support IE8 anyway
+                              ],
+                              flexbox: 'no-2009',
+                          }),
+                      ],
+                  },
+              },
+              {
+                  loader: 'less-loader',
+                  options: {
+                      sourceMap: false,
+                      include: paths.appSrc,
+                  },
+              },
+          ],
       },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
