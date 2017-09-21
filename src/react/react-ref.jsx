@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {SimpleHoc} from '../form/SimpleHoc';
+import * as Pubsub from '../commons/PubSub';
 
 
 @SimpleHoc
@@ -19,7 +20,12 @@ export default class ReactEventDom extends Component {
             e = window.event;
             // if(e) alert(`你按下了键盘上的${e.key}键`)
             console.log(e);
-        }
+        };
+        const data = (data) => {
+            console.log(data);};
+        Pubsub.subscribe('test','123', data)
+        Pubsub.subscribe('test', '55', data)
+        Pubsub.subscribe('test', '66', data)
     }
 
     handleClick = () => {

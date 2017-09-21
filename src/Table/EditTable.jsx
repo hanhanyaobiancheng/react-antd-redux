@@ -3,6 +3,7 @@ import {Table, Popconfirm, Button} from 'antd';
 import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
+import * as Pubsub from '../commons/PubSub';
 
 @SimpleHoc
 export default class EditTable extends Component {
@@ -19,7 +20,8 @@ export default class EditTable extends Component {
             const target = e.target || e.srcElement;
             const className = target.getAttribute('class');
             classNameArr.push(className);
-        })
+        });
+        Pubsub.publish('test',{name: '我是Pubsub.publish发布的消息'});
     }
 
     onCellChange = (index, key) => {
