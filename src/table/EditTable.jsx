@@ -3,7 +3,7 @@ import {Table, Popconfirm, Button} from 'antd';
 import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
-import * as Pubsub from '../commons/PubSub';
+import * as Pubsub from '../commons/EventEmiter';
 
 @SimpleHoc
 export default class EditTable extends Component {

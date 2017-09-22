@@ -2,7 +2,7 @@ import {DateText} from '../react/test';
 import WillDo from '../whatTodo/index'
 import EditTable from '../table/EditTable';
 import ReactDomEvent from '../react/react-ref'
-import MakeRoomCard from '../form/form';
+import AntdForm from '../form/form';
 import TodoList from '../todoList/TodoList';
 
 export const menuData = [
@@ -14,16 +14,23 @@ export const menuData = [
             {
                 key: '1-1',
                 title: 'redux test',
-                path: '/test',
                 icon: 'setting',
-                component: DateText,
-            },
-            {
-                key: '1-2',
-                title: 'What to do',
-                path: '/todo',
-                icon: 'setting',
-                component: WillDo,
+                children: [
+                    {
+                        key: '1-1-1',
+                        title: 'redux test',
+                        path: '/test',
+                        icon: 'setting',
+                        component: DateText,
+                    },
+                    {
+                        key: '1-1-2',
+                        title: 'What to do',
+                        path: '/todo',
+                        icon: 'setting',
+                        component: WillDo,
+                    },
+                ],
             },
             {
                 key: '1-3',
@@ -44,7 +51,7 @@ export const menuData = [
                 title: 'antd form',
                 path: '/antd-form',
                 icon: 'setting',
-                component: MakeRoomCard,
+                component: AntdForm,
             },
             {
                 key: '1-6',
@@ -52,6 +59,34 @@ export const menuData = [
                 path: '/moke-todolist',
                 icon: 'setting',
                 component: TodoList,
+            },
+        ]
+    },
+    {
+        key: '2',
+        title: 'redux',
+        icon: 'mail',
+        children: [
+            {
+                key: '2-1',
+                title: 'redux test',
+                icon: 'setting',
+                children: [
+                    {
+                        key: '2-1-1',
+                        title: 'redux test',
+                        path: '/test1',
+                        icon: 'setting',
+                        component: DateText,
+                    },
+                    {
+                        key: '2-1-2',
+                        title: 'What to do',
+                        path: '/todo1',
+                        icon: 'setting',
+                        component: WillDo,
+                    },
+                ],
             },
         ]
     }

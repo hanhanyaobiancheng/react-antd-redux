@@ -1,3 +1,5 @@
+// 这个发布订阅是参考的 https://github.com/zkboys/react-antd-redux-webpack-es6-spa-boilerplate中封装的发布订阅
+
 /**
  * 发布订阅模式,带有消息队列 生产者消费者 性质
  * @module 发布订阅
@@ -16,6 +18,7 @@ export function publish(topic, args) {
      * 注意：为了后订阅的所有订阅者都能接受到消息，这个消息队列不会被清空，如果存在大量的后订阅情况，小心内存溢出。
      * */
     unConsumedMsg[topic] = args;
+    console.log(topics);
 
     if (!topics[topic]) {
         return false;
