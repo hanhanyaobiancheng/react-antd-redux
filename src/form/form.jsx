@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import moment from 'moment';
 import {Form, DatePicker, TimePicker, Input, Row, Col, Tabs, Button} from 'antd';
 import './style.less';
 
@@ -37,6 +38,14 @@ export default class AntdForm extends Component {
                 }
             }
         });
+    };
+
+    disabledDate = (current) => {
+        const now = moment().format('YYYYMMDD');
+        if (current) {
+            const selectedDate = current.format('YYYYMMDD');
+            return selectedDate < now;
+        }
     };
 
     render() {
@@ -79,7 +88,7 @@ export default class AntdForm extends Component {
                                             {required: true, message: '请选择入住时间'},
                                         ],
                                     })(
-                                        <DatePicker/>
+                                        <DatePicker disabledDate={this.disabledDate}/>
                                     )}
                                 </FormItem>
                             </Col>

@@ -14,23 +14,16 @@ export const menuData = [
             {
                 key: '1-1',
                 title: 'redux test',
+                path: '/test',
                 icon: 'setting',
-                children: [
-                    {
-                        key: '1-1-1',
-                        title: 'redux test',
-                        path: '/test',
-                        icon: 'setting',
-                        component: DateText,
-                    },
-                    {
-                        key: '1-1-2',
-                        title: 'What to do',
-                        path: '/todo',
-                        icon: 'setting',
-                        component: WillDo,
-                    },
-                ],
+                component: DateText,
+            },
+            {
+                key: '1-2',
+                title: 'What to do',
+                path: '/todo',
+                icon: 'setting',
+                component: WillDo,
             },
             {
                 key: '1-3',
@@ -62,32 +55,4 @@ export const menuData = [
             },
         ]
     },
-    {
-        key: '2',
-        title: 'redux',
-        icon: 'mail',
-        children: [
-            {
-                key: '2-1',
-                title: 'redux test',
-                icon: 'setting',
-                children: [
-                    {
-                        key: '2-1-1',
-                        title: 'redux test',
-                        path: '/test1',
-                        icon: 'setting',
-                        component: DateText,
-                    },
-                    {
-                        key: '2-1-2',
-                        title: 'What to do',
-                        path: '/todo1',
-                        icon: 'setting',
-                        component: WillDo,
-                    },
-                ],
-            },
-        ]
-    }
 ];
