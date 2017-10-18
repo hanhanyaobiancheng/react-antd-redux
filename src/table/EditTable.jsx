@@ -4,6 +4,7 @@ import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
 import * as Pubsub from '../commons/EventEmiter';
+import JsTable from './JsTable';
 
 @SimpleHoc
 export default class EditTable extends Component {
@@ -112,6 +113,7 @@ export default class EditTable extends Component {
                     onSubmit={this.handleTestArrangeModalSubmit}
                     onCancel={() => this.setState({testArrangeModalVisible: false})}
                 />
+                <JsTable/>
             </div>
         );
     }
