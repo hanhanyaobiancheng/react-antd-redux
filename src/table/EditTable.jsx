@@ -5,6 +5,7 @@ import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
 import * as Pubsub from '../commons/EventEmiter';
 import JsTable from './JsTable';
+import {convertCurrency} from '../commons/transferNumToChinese';
 
 @SimpleHoc
 export default class EditTable extends Component {
@@ -81,6 +82,8 @@ export default class EditTable extends Component {
         // console.log(this.props.say); // 测试高阶组件@SimpleHOC中封装的方法
         const {testArrangeModalVisible, testArrangeModalData, dataSource} = this.state;
         const title = testArrangeModalData.id ? `修改${testArrangeModalData.classRoom}` : '添加';
+        const num = 1234546.12;
+        const text = convertCurrency(num);
         return (
             <div>
                 <Button
@@ -114,6 +117,7 @@ export default class EditTable extends Component {
                     onCancel={() => this.setState({testArrangeModalVisible: false})}
                 />
                 <JsTable/>
+                <b>{text}</b>
             </div>
         );
     }
