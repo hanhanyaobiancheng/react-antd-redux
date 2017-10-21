@@ -6,6 +6,7 @@ import TestArrangeModal from './TestArrangeModal';
 import * as Pubsub from '../commons/EventEmiter';
 import JsTable from './JsTable';
 import {convertCurrency} from '../commons/transferNumToChinese';
+import AccountDetail from './AccountDetail';
 
 @SimpleHoc
 export default class EditTable extends Component {
@@ -118,6 +119,7 @@ export default class EditTable extends Component {
                 />
                 <JsTable/>
                 <b>{text}</b>
+                <AccountDetail/>
             </div>
         );
     }

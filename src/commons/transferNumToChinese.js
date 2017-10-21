@@ -58,7 +58,7 @@ export function convertCurrency(money) {
                 }
                 //归零
                 zeroCount = 0;
-                chineseStr += cnNums[parseInt(n)] + cnIntRadice[m];
+                chineseStr += cnNums[parseInt(n, 10)] + cnIntRadice[m];
             }
             if (m === 0 && zeroCount < 4) {
                 chineseStr += cnIntUnits[q];
