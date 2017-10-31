@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Table, Popconfirm, Button} from 'antd';
+import {Table, Popconfirm, Button, Card} from 'antd';
 import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
@@ -7,6 +7,8 @@ import * as Pubsub from '../commons/EventEmiter';
 import JsTable from './JsTable';
 import {convertCurrency} from '../commons/transferNumToChinese';
 import AccountDetail from './AccountDetail';
+import ClassRoomModal from './ClassRoomModal';
+import * as classRoomUsefulData from './classRoomUsefulData.json';
 
 @SimpleHoc
 export default class EditTable extends Component {
@@ -14,6 +16,7 @@ export default class EditTable extends Component {
         testArrangeModalVisible: false,
         testArrangeModalData: {},
         dataSource: [{classRoom: 'A201', teacher: '严蔚敏', course: '数据结构与算法', time: '20170819', key: '1', id: '1344'}],
+        classRoomUsefulModalVisible: false,
     };
 
     componentDidMount() {
@@ -60,6 +63,17 @@ export default class EditTable extends Component {
                     >
                         编辑
                     </a>
+                    <a
+                        style={{margin: '0 5px'}}
+                        onClick={() => {
+                            console.log(123);
+                            this.setState({
+                                classRoomUsefulModalVisible: true,
+                            });
+                        }}
+                    >
+                        查看教室可用性
+                    </a>
                     <Popconfirm
                         title={`确定要删除${record.classRoom}教室吗`}
                         onConfirm={() => {this.setState({dataSource: []})}}
@@ -75,51 +89,75 @@ export default class EditTable extends Component {
         },
     ];
 
+    // 修改数据或添加数据后的提交
     handleTestArrangeModalSubmit = (values) => {
         console.log(values);
     };
 
     render() {
         // console.log(this.props.say); // 测试高阶组件@SimpleHOC中封装的方法
-        const {testArrangeModalVisible, testArrangeModalData, dataSource} = this.state;
+        const {testArrangeModalVisible, testArrangeModalData, dataSource, classRoomUsefulModalVisible} = this.state;
         const title = testArrangeModalData.id ? `修改${testArrangeModalData.classRoom}` : '添加';
         const num = 1234546.12;
         const text = convertCurrency(num);
+        console.log(classRoomUsefulModalVisible, classRoomUsefulData.list);
+
         return (
             <div>
-                <Button
-                    type="primary"
-                    onClick={() => {this.setState({
-                        testArrangeModalVisible: true,
-                        testArrangeModalData: {},
-                    })}}
+                <Card
+                    title="antd中的表格"
+                    extra={
+                        <Popconfirm
+                            title="非要点我吗？"
+                            onConfirm={() => alert("点啥点，是不是闲的")}
+                        >
+                            <a
+                                onClick={this.props.handleClick}
+                            >高阶组件123</a>
+                        </Popconfirm>
+                    }
                 >
-                    添加
-                </Button>
-                <Table
-                    columns={this.columns}
-                    dataSource={dataSource}
-                />
-                <div>
-                    <Popconfirm
-                        title="非要点我吗？"
-                        onConfirm={() => alert("点啥点，是不是闲的")}
+                    <Button
+                        type="primary"
+                        onClick={() => {this.setState({
+                            testArrangeModalVisible: true,
+                            testArrangeModalData: {},
+                        })}}
                     >
-                        <a
-                            onClick={this.props.handleClick}
-                        >高阶组件123</a>
-                    </Popconfirm>
-                </div>
-                <TestArrangeModal
-                    title={title}
-                    visible={testArrangeModalVisible}
-                    data={testArrangeModalData}
-                    onSubmit={this.handleTestArrangeModalSubmit}
-                    onCancel={() => this.setState({testArrangeModalVisible: false})}
-                />
-                <JsTable/>
-                <b>{text}</b>
-                <AccountDetail/>
+                        添加
+                    </Button>
+                    <Table
+                        columns={this.columns}
+                        dataSource={dataSource}
+                    />
+                    <TestArrangeModal
+                        title={title}
+                        visible={testArrangeModalVisible}
+                        data={testArrangeModalData}
+                        onSubmit={this.handleTestArrangeModalSubmit}
+                        onCancel={() => this.setState({testArrangeModalVisible: false})}
+                    />
+                    <ClassRoomModal
+                        visible={classRoomUsefulModalVisible}
+                        onCancel={() => this.setState({classRoomUsefulModalVisible: false})}
+                        data={classRoomUsefulData.list}
+                    />
+                </Card>
+                <Card
+                    style={{marginTop: '20px'}}
+                    title="原生html表格"
+                    extra={
+                        <b>{`试验下将数字${num}转成大写中文${text}`}</b>
+                    }
+                >
+                    <JsTable/>
+                </Card>
+                <Card
+                    style={{marginTop: '20px'}}
+                    title="antd中可折叠的表格"
+                >
+                    <AccountDetail/>
+                </Card>
             </div>
         );
     }

@@ -1,0 +1,41 @@
+{
+"resultCode": "",
+"resultMsg": "",
+"list": [
+          {
+            "date": "2017-10-14",
+            "availableRoomCode": 1,
+            "available": "可用",
+            "time": "下午",
+            "classRoomName": "A201"
+          },
+          {
+            "date": "2017-10-15",
+            "availableRoomCode": 1,
+            "available": "可用",
+            "time": "全天",
+            "classRoomName": "A201"
+          },
+          {
+            "date": "2017-10-16",
+            "availableRoomCode": 1,
+            "available": "可用",
+            "time": "上午",
+            "classRoomName": "A201"
+          },
+          {
+            "date": "2017-10-17",
+            "availableRoomCode": 1,
+            "available": "可用",
+            "time": "全天",
+            "classRoomName": "A201"
+          },
+          {
+            "date": "2017-10-18",
+            "availableRoomCode": 1,
+            "available": "可用",
+            "time": "全天",
+            "classRoomName": "A201"
+          }
+        ]
+}
