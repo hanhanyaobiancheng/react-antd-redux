@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Menu, Icon} from 'antd';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {throttle} from 'lodash/function';
 import {getWindowSize} from '../commons/GetWindowSize';
 import 'antd/dist/antd.css';
 import '../App.css';
@@ -19,10 +20,18 @@ export default class SideMenu extends Component {
         this.setState({windowHeight: getWindowSize().height});
     };
 
-    componentDidMount() {
-        this.handleWindowResize();
+    componentWillMount() {
         // 当浏览器控制台呼出以后，刷新页面左侧导航的高度会随着浏览器窗口高度的变化而变化
-        window.addEventListener('resize', this.handleWindowResize);
+        this.handleWindowResize();
+
+        /**
+         * 此处引用lodash中封装的throttle方法，以减少获取浏览器窗口大小的调用次数，以减少操作DOM的次数
+         * 翻看了throttle方法的实现原理，里边运用了setTimeout
+         * 因此将监听浏览器窗口大小变化的函数从componentDidMount中提到了componentWillMount中使用，
+         */
+        window.addEventListener('resize', throttle(() => this.handleWindowResize()));
+        // const windowSize = getWindowSize();
+        // this.setState({windowHeight: windowSize.height});
     }
 
     componentWillUnmount() {
