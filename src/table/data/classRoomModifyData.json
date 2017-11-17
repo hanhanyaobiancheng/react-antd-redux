@@ -1,0 +1,330 @@
+{"checkInId": "146032953665782034",
+  "orderId": "146032953665782013",
+  "roomName": "B11",
+  "roomTypeId": "145300463024078862",
+  "roomTypeName": "小床房",
+  "price": "333.00",
+  "auth": "400.00",
+  "useable": "-366.00",
+  "invoice": "0.00",
+  "arriveAt": "2017-11-03 09:13",
+  "leaveAt": "2017-11-08 12:00",
+  "customerType": "马跃客户类型1",
+  "customerName": "马跃客户12",
+  "teamName": "",
+  "booker": "马跃测试专用",
+  "seller": "马跃测试专用",
+  "remarkBox": [
+    ""
+  ],
+  "remark": "",
+  "status": "入住中",
+  "cardnum": "0",
+  "memberList": [],
+  "roomList": [
+    {
+      "checkInId": "146032953665782034",
+      "roomName": "B11",
+      "masterPays": [
+        ""
+      ],
+      "master": "1",
+      "arrive": "20171103",
+      "pleave": "20171108",
+      "rtname": "小床房",
+      "fstatus": "",
+      "priceList": [
+        {
+          "id": "146032953665782038",
+          "PriceDate": "20171103",
+          "priceName": "琳琳测试用",
+          "roomType": "小床房",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782039",
+          "PriceDate": "20171104",
+          "priceName": "琳琳测试用",
+          "roomType": "小床房",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782040",
+          "PriceDate": "20171105",
+          "priceName": "琳琳测试用",
+          "roomType": "小床房",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782041",
+          "PriceDate": "20171106",
+          "priceName": "琳琳测试用",
+          "roomType": "小床房",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146257436775284956",
+          "PriceDate": "20171107",
+          "priceName": "琳琳测试用",
+          "roomType": "小床房",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        }
+      ]
+    },
+    {
+      "checkInId": "146032953665782043",
+      "roomName": "A17",
+      "masterPays": [
+        ""
+      ],
+      "master": "2",
+      "arrive": "20171103",
+      "pleave": "20171107",
+      "rtname": "标双",
+      "fstatus": "",
+      "priceList": [
+        {
+          "id": "146032953665782044",
+          "PriceDate": "20171103",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782045",
+          "PriceDate": "20171104",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782046",
+          "PriceDate": "20171105",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782047",
+          "PriceDate": "20171106",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        }
+      ]
+    },
+    {
+      "checkInId": "146032953665782051",
+      "roomName": "A29",
+      "masterPays": [
+        ""
+      ],
+      "master": "2",
+      "arrive": "20171103",
+      "pleave": "20171107",
+      "rtname": "标单",
+      "fstatus": "",
+      "priceList": [
+        {
+          "id": "146032953665782052",
+          "PriceDate": "20171103",
+          "priceName": "琳琳测试用",
+          "roomType": "标单",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782053",
+          "PriceDate": "20171104",
+          "priceName": "琳琳测试用",
+          "roomType": "标单",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782054",
+          "PriceDate": "20171105",
+          "priceName": "琳琳测试用",
+          "roomType": "标单",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782055",
+          "PriceDate": "20171106",
+          "priceName": "琳琳测试用",
+          "roomType": "标单",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        }
+      ]
+    },
+    {
+      "checkInId": "146032953665782057",
+      "roomName": "A18",
+      "masterPays": [
+        ""
+      ],
+      "master": "2",
+      "arrive": "20171103",
+      "pleave": "20171107",
+      "rtname": "标双",
+      "fstatus": "",
+      "priceList": [
+        {
+          "id": "146032953665782058",
+          "PriceDate": "20171103",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782059",
+          "PriceDate": "20171104",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782060",
+          "PriceDate": "20171105",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        },
+        {
+          "id": "146032953665782061",
+          "PriceDate": "20171106",
+          "priceName": "琳琳测试用",
+          "roomType": "标双",
+          "oldPrice": "333.00",
+          "newPrice": "333.00",
+          "oldBreakfast": "1",
+          "newBreakfast": "1",
+          "remark": ""
+        }
+      ]
+    }
+  ],
+  "priceList": [
+    {
+      "id": "146032953665782038",
+      "PriceDate": "20171103",
+      "priceName": "琳琳测试用",
+      "roomType": "小床房",
+      "oldPrice": "333.00",
+      "newPrice": "333.00",
+      "oldBreakfast": "1",
+      "newBreakfast": "1",
+      "remark": ""
+    },
+    {
+      "id": "146032953665782039",
+      "PriceDate": "20171104",
+      "priceName": "琳琳测试用",
+      "roomType": "小床房",
+      "oldPrice": "333.00",
+      "newPrice": "333.00",
+      "oldBreakfast": "1",
+      "newBreakfast": "1",
+      "remark": ""
+    },
+    {
+      "id": "146032953665782040",
+      "PriceDate": "20171105",
+      "priceName": "琳琳测试用",
+      "roomType": "小床房",
+      "oldPrice": "333.00",
+      "newPrice": "333.00",
+      "oldBreakfast": "1",
+      "newBreakfast": "1",
+      "remark": ""
+    },
+    {
+      "id": "146032953665782041",
+      "PriceDate": "20171106",
+      "priceName": "琳琳测试用",
+      "roomType": "小床房",
+      "oldPrice": "333.00",
+      "newPrice": "333.00",
+      "oldBreakfast": "1",
+      "newBreakfast": "1",
+      "remark": ""
+    },
+    {
+      "id": "146257436775284956",
+      "PriceDate": "20171107",
+      "priceName": "琳琳测试用",
+      "roomType": "小床房",
+      "oldPrice": "333.00",
+      "newPrice": "333.00",
+      "oldBreakfast": "1",
+      "newBreakfast": "1",
+      "remark": ""
+    }
+  ],
+  "isMaster": 1,
+  "accountId": 5035,
+  "resultCode": "",
+  "resultMsg": ""
+}
