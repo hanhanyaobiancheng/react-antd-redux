@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import SideMenu from './menu/menu';
+// import Home from './home/Home';
+import SideMenu from './menu/javaScript/menu';
 import './App.css';
 
 export default class App extends Component {

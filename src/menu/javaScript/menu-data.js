@@ -1,9 +1,9 @@
-import {DateText} from '../react/test';
-import WillDo from '../whatTodo/index'
-import EditTable from '../table/EditTable';
-import ReactDomEvent from '../react/react-ref'
-import AntdForm from '../form/form';
-import TodoList from '../todoList/TodoList';
+import {DateText} from '../../react/test';
+import WillDo from '../../whatTodo/index'
+import EditTable from '../../table/EditTable';
+import ReactDomEvent from '../../react/react-ref'
+import AntdForm from '../../form/form';
+import TodoList from '../../todoList/TodoList';
 
 export const menuData = [
     {
@@ -14,7 +14,7 @@ export const menuData = [
             {
                 key: '1-1',
                 title: 'redux test',
-                path: '/test',
+                path: 'test',
                 icon: 'setting',
                 component: DateText,
             },

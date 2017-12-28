@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {Menu, Icon} from 'antd';
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import {throttle} from 'lodash/function';
-import {getWindowSize} from '../commons/GetWindowSize';
+import {getWindowSize} from '../../commons/GetWindowSize';
 import 'antd/dist/antd.css';
-import '../App.css';
+import '../../App.css';
 import {menuData} from './menu-data';
 
 const SubMenu = Menu.SubMenu;
