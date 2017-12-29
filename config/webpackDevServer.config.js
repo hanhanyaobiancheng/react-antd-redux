@@ -29,7 +29,7 @@ module.exports = function(proxy, allowedHost) {
     disableHostCheck:
       !proxy || process.env.DANGEROUSLY_DISABLE_HOST_CHECK === 'true',
     // Enable gzip compression of generated files.
-    compress: true,
+    compress: true, // 启用gzip启用gzip压缩的所有服务
     // Silence WebpackDevServer's own logs since they're generally not useful.
     // It will still show compile warnings and errors with this setting.
     clientLogLevel: 'none',
@@ -47,9 +47,9 @@ module.exports = function(proxy, allowedHost) {
     // for files like `favicon.ico`, `manifest.json`, and libraries that are
     // for some reason broken when imported through Webpack. If you just want to
     // use an image, put it in `src` and `import` it from JavaScript instead.
-    contentBase: paths.appPublic,
+    contentBase: paths.appPublic, //本地服务器所加载的页面所在的目录
     // By default files from `contentBase` will not trigger a page reload.
-    watchContentBase: true,
+    watchContentBase: true, // 设置为true，当源文件改变时会自动刷新页面
     // Enable hot reloading server. It will provide /sockjs-node/ endpoint
     // for the WebpackDevServer client so it can learn when the files were
     // updated. The WebpackDevServer client is included as an entry point
@@ -71,13 +71,20 @@ module.exports = function(proxy, allowedHost) {
     https: protocol === 'https',
     host: host,
     overlay: false,
+
+    /** historyApiFallback:
+     * 在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
+     * 如果是多入口文件，需要生成多个html入口文件的时候就需要增加rewrites的配置了，指明哪些路径映射到哪个html
+     *
+     *  **/
+
     historyApiFallback: {
       // Paths with dots should still use the history fallback.
       // See https://github.com/facebookincubator/create-react-app/issues/387.
       disableDotRule: true,
       // 指明哪些路径映射到哪个html
       rewrites: [
-          { from: /^\/Home.html/, to: '/build/Home.html' },
+          { from: /^\/home.html/, to: '/build/home.html' },
       ]
     },
     public: allowedHost,

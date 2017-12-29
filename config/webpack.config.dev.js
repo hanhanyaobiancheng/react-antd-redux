@@ -28,6 +28,21 @@ const env = getClientEnvironment(publicUrl);
 module.exports = {
   // You may want 'eval' instead if you prefer to see the compiled output in DevTools.
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
+
+  /* devtool: 生成Source Maps（使调试更容易）,共有以下四个值，他们的特征分别如下
+  *
+  * source-map --- 在一个单独的文件中产生一个完整且功能完全的文件。这个文件具有最好的source map，但是它会减慢打包速度；
+  *
+  * cheap-module-source-map --- 在一个单独的文件中生成一个不带列映射的map，不带列映射提高了打包速度，但是也使得浏览器
+  * 开发者工具只能对应到具体的行，不能对应到具体的列（符号），会对调试造成不便；
+  *
+  * eval-source-map --- 使用eval打包源文件模块，在同一个文件中生成干净的完整的source map。这个选项可以在不影响构建速度的前提下生成完整
+  * 的sourcemap，但是对打包后输出的JS文件的执行具有性能和安全的隐患。在开发阶段这是一个非常好的选项，在生产阶段则一定不要启用这个选项；
+  *
+  * cheap-module-eval-source-map --- 这是在打包文件时最快的生成source map的方法，生成的Source Map 会和打包后的JavaScript文件同行显示，
+  * 没有列映射，和eval-source-map选项具有相似的缺点；
+  * */
+
   devtool: 'cheap-module-source-map',
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
@@ -194,8 +209,25 @@ module.exports = {
       {
           test: /\.less/,
           use: [
-              'style-loader',
-              'css-loader',
+              'style-loader', // style-loader将所有的计算后的样式加入页面中, style-loader必须在css-loader之前？
+              // 'css-loader', // css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,
+
+              // 下面这样写为啥不行, css module不好使, 因为与引用图片的路径有关，参考https://github.com/webpack-contrib/css-loader#root
+              {
+                  loader: require.resolve('css-loader'), // css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,
+                  /**
+                   * CSS modules的技术意在把JS的模块化思想带入CSS中来，通过CSS模块，所有的类名，动画名默认都只作用于当前模块
+                   * 可以直接把CSS的类名传递到组件的代码中，这样做有效避免了全局污染
+                   *
+                   * **/
+                  options: {
+                      modules: true, // 指定启用css modules
+                      camelCase: true,
+                      localIdentName: '[hash:base64:5]' // 指定css的类名格式
+                  },
+              },
+
+              // PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。
               {
                   loader: require.resolve('postcss-loader'),
                   options: {

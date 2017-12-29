@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Card} from 'antd';
 import {setCurrentUser} from '../commons/commonFunctions';
-import './home.less';
+import styles from  './home.less';
 
 
 export default class Home extends Component {
@@ -16,12 +16,11 @@ export default class Home extends Component {
             setCurrentUser(currentUser)
         }
     };
-
     render() {
         return (
             <div>
-                <div className="root">
-                    <div className="content" onClick={this.handleTitleClick}>
+                <div className={styles.root}>
+                    <div className={styles.content} onClick={this.handleTitleClick}>
                         <Card>
                             <a href="/">blog</a>
                         </Card>
