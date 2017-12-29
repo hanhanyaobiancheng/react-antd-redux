@@ -1,4 +1,4 @@
-import {DateText} from '../../react/test';
+import Text from '../../react/test';
 import WillDo from '../../whatTodo/index'
 import EditTable from '../../table/EditTable';
 import ReactDomEvent from '../../react/react-ref'
@@ -14,9 +14,9 @@ export const menuData = [
             {
                 key: '1-1',
                 title: 'redux test',
-                path: 'test',
+                path: '/test',
                 icon: 'setting',
-                component: DateText,
+                component: Text,
             },
             {
                 key: '1-2',

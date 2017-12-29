@@ -1,20 +1,29 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Card} from 'antd';
-// import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
+import {setCurrentUser} from '../commons/commonFunctions';
 import './home.less';
 
 
 export default class Home extends Component {
     state = {};
 
+    handleTitleClick = (e) => {
+        e = e || window.event;
+        const target = e.srcElement || e.target;
+        if (target && target.nodeName.toLocaleLowerCase() === 'a') {
+            const currentUser = {};
+            setCurrentUser(currentUser)
+        }
+    };
+
     render() {
         return (
             <div>
                 <div className="root">
-                    <div className="content">
+                    <div className="content" onClick={this.handleTitleClick}>
                         <Card>
-                            <a href="Home.html">blog</a>
+                            <a href="/">blog</a>
                         </Card>
                     </div>
                 </div>

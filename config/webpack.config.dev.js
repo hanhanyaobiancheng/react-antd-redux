@@ -61,13 +61,13 @@ module.exports = {
           require.resolve('react-dev-utils/webpackHotDevClient'),
           require.resolve('./polyfills'),
           require.resolve('react-error-overlay'),
-          paths.appHome,
+          paths.appIndexJs,
       ],
-      Home: [
+      home: [
           require.resolve('react-dev-utils/webpackHotDevClient'),
           require.resolve('./polyfills'),
           require.resolve('react-error-overlay'),
-          paths.appIndexJs,
+          paths.appHome,
       ],
     },
     output: {
@@ -286,9 +286,9 @@ module.exports = {
 
     new HtmlWebpackPlugin({
         inject: true,
-        chunks: ["Home"],
+        chunks: ["home"],
         template: paths.appHtml,
-        filename: 'Home.html',
+        filename: 'home.html',
     }),
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),

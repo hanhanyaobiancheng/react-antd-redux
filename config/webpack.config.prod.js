@@ -54,7 +54,10 @@ module.exports = {
   // You can exclude the *.map files from the build during deployment.
   devtool: 'source-map',
   // In production, we only want to load the polyfills and the app code.
-  entry: [require.resolve('./polyfills'), paths.appIndexJs],
+  entry: {
+    index: [require.resolve('./polyfills'), paths.appIndexJs],
+    home: [require.resolve('./polyfills'), paths.appHome],
+  },
   output: {
     // The build folder.
     path: paths.appBuild,
@@ -68,8 +71,7 @@ module.exports = {
     // Point sourcemap entries to original disk location (format as URL on Windows)
     devtoolModuleFilenameTemplate: info =>
       path
-        .relative(paths.appSrc, info.absoluteResourcePath)
-        .replace(/\\/g, '/'),
+        .relative(paths.appSrc, info.absoluteResourcePath),
   },
   resolve: {
     // This allows you to set a fallback for where Webpack should look for modules.
@@ -139,6 +141,7 @@ module.exports = {
           /\.(js|jsx)$/,
           /\.css$/,
           /\.json$/,
+          /\.less$/,
           /\.bmp$/,
           /\.gif$/,
           /\.jpe?g$/,
@@ -168,6 +171,40 @@ module.exports = {
           
           compact: true,
         },
+      },
+      {
+          test: /\.less/,
+          use: [
+              'style-loader',
+              'css-loader',
+              {
+                  loader: require.resolve('postcss-loader'),
+                  options: {
+                      // Necessary for external CSS imports to work
+                      // https://github.com/facebookincubator/create-react-app/issues/2677
+                      ident: 'postcss',
+                      plugins: () => [
+                          require('postcss-flexbugs-fixes'),
+                          autoprefixer({
+                              browsers: [
+                                  '>1%',
+                                  'last 4 versions',
+                                  'Firefox ESR',
+                                  'not ie < 9', // React doesn't support IE8 anyway
+                              ],
+                              flexbox: 'no-2009',
+                          }),
+                      ],
+                  },
+              },
+              {
+                  loader: 'less-loader',
+                  options: {
+                      sourceMap: false,
+                      include: paths.appSrc,
+                  },
+              },
+          ],
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
@@ -238,6 +275,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: paths.appHtml,
+      chunks: ["index"],
       minify: {
         removeComments: true,
         collapseWhitespace: true,
@@ -250,6 +288,24 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true,
       },
+    }),
+    new HtmlWebpackPlugin({
+        inject: true,
+        template: paths.appHtml,
+        chunks: ["home"],
+        filename: "home.html",
+        minify: {
+            removeComments: true,
+            collapseWhitespace: true,
+            removeRedundantAttributes: true,
+            useShortDoctype: true,
+            removeEmptyAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            keepClosingSlash: true,
+            minifyJS: true,
+            minifyCSS: true,
+            minifyURLs: true,
+        },
     }),
     // Makes some environment variables available to the JS code, for example:
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.

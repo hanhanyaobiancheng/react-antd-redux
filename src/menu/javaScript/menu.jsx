@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import {throttle} from 'lodash/function';
 import {getWindowSize} from '../../commons/GetWindowSize';
 import 'antd/dist/antd.css';
-import '../../App.css';
+import './menu.less';
 import {menuData} from './menu-data';
 
 const SubMenu = Menu.SubMenu;
@@ -135,7 +135,7 @@ export default class SideMenu extends Component {
                             {this.renderTreeNodes(menuData)}
                         </Menu>
                     </div>
-                    <div className="content">
+                    <div className="menu-content">
                         {this.renderRoutes(menuData)}
                     </div>
                 </div>

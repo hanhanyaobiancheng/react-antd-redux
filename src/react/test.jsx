@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
 import {Select, Input, Form} from 'antd';
-import '../App.css'
 
 const {Option} = Select;
 const FormItem = Form.Item;
 
-
-export class Test extends Component {
+@Form.create()
+export default class Test extends Component {
 
     state = {
         data: [],
@@ -40,53 +39,53 @@ export class Test extends Component {
 
         return (
             <div>
-                <h3>下拉框</h3>
-                <div style={{position: 'relative'}}>
-                    <FormItem
-                        label="咸鸭蛋"
-                        {...layout}
-                    >
-                        {getFieldDecorator('eggs', {
-                            initialValue: {key: "0eggs", label: "0个咸鸭蛋"},
-                            rules: [],
-                        })(
-                            <Select
-                                labelInValue
-                                style={{width: '100px'}}
-                                allowClear={false}
-                                onChange={value => this.handleSelectValueChange(value)}
-                            >
-                                {
-                                    data.map(item => <Option value={item.value} key={item.key}>{item.label}</Option>)
-                                }
-                            </Select>
-                        )}
-                    </FormItem>
-                    <div style={{position: 'absolute', top: 0, left: '180px', width: '100%'}}>
+                <Form
+                    // style={{width: '300px'}}
+                >
+                    <h3>下拉框</h3>
+                    <div style={{position: 'relative'}}>
                         <FormItem
-                            label="赠品"
+                            label="咸鸭蛋"
                             {...layout}
                         >
-                            {getFieldDecorator('gifts', {
+                            {getFieldDecorator('eggs', {
+                                initialValue: {key: "0eggs", label: "0个咸鸭蛋"},
                                 rules: [],
                             })(
                                 <Select
+                                    labelInValue
                                     style={{width: '100px'}}
-                                    allowClear={true}
-                                    disabled={(eggs && eggs.label < '6个咸鸭蛋')}
+                                    allowClear={false}
+                                    onChange={value => this.handleSelectValueChange(value)}
                                 >
-                                    <Option value='10个鸡蛋' key='10个鸡蛋'>10个鸡蛋</Option>
-                                    <Option value='3个鹅蛋' key='3个鹅蛋'>3个鹅蛋</Option>
+                                    {
+                                        data.map(item => <Option value={item.value} key={item.key}>{item.label}</Option>)
+                                    }
                                 </Select>
                             )}
-                            <span style={{marginLeft: '10px'}}>（咸鸭蛋只有六个及以上才能选择赠送鸡蛋和鹅蛋）</span>
                         </FormItem>
+                        <div style={{position: 'absolute', top: 0, left: '180px', width: '700px'}}>
+                            <FormItem
+                                label="赠品"
+                                {...layout}
+                            >
+                                {getFieldDecorator('gifts', {
+                                    rules: [],
+                                })(
+                                    <Select
+                                        style={{width: '100px'}}
+                                        allowClear={true}
+                                        disabled={(eggs && eggs.label < '6个咸鸭蛋')}
+                                    >
+                                        <Option value='10个鸡蛋' key='10个鸡蛋'>10个鸡蛋</Option>
+                                        <Option value='3个鹅蛋' key='3个鹅蛋'>3个鹅蛋</Option>
+                                    </Select>
+                                )}
+                                <span style={{marginLeft: '10px'}}>（咸鸭蛋只有六个及以上才能选择赠送鸡蛋和鹅蛋）</span>
+                            </FormItem>
+                        </div>
                     </div>
-                </div>
-                <h3>表单的验证</h3>
-                <Form
-                    style={{width: '300px'}}
-                >
+                    <h3>表单的验证</h3>
                     <h4>日期校验</h4>
                     <FormItem
                         label="开始日期(MM-DD)"
@@ -98,7 +97,7 @@ export class Test extends Component {
                                 {pattern: /^((0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-9])|((0[13-9]|1[0-2])-30)|(0[13578]|1[02])-31)$/, message: '日期格式不正确'}
                             ],
                         })(
-                            <Input placeholder="请输入开始日期"/>
+                            <Input placeholder="请输入开始日期" style={{width: '210px'}}/>
                         )}
                     </FormItem>
                 </Form>
@@ -106,5 +105,3 @@ export class Test extends Component {
         )
     }
 }
-
-export const DateText = Form.create()(Test);
