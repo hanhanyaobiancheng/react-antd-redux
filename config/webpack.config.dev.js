@@ -206,8 +206,44 @@ module.exports = {
           cacheDirectory: true,
         },
       },
+        {
+            test: /\.less/,
+            exclude: paths.appSrc,
+            use: [
+                'style-loader',
+                'css-loader',
+                // PostCSS来为CSS代码自动添加适应不同浏览器的CSS前缀。
+                {
+                    loader: require.resolve('postcss-loader'),
+                    options: {
+                        // Necessary for external CSS imports to work
+                        // https://github.com/facebookincubator/create-react-app/issues/2677
+                        ident: 'postcss',
+                        plugins: () => [
+                            require('postcss-flexbugs-fixes'),
+                            autoprefixer({
+                                browsers: [
+                                    '>1%',
+                                    'last 4 versions',
+                                    'Firefox ESR',
+                                    'not ie < 9', // React doesn't support IE8 anyway
+                                ],
+                                flexbox: 'no-2009',
+                            }),
+                        ],
+                    },
+                },
+                {
+                    loader: 'less-loader',
+                    options: {
+                        sourceMap: false,
+                    },
+                },
+            ],
+        },
       {
           test: /\.less/,
+          include: paths.appSrc,
           use: [
               'style-loader', // style-loader将所有的计算后的样式加入页面中, style-loader必须在css-loader之前？
               // 'css-loader', // css-loader使你能够使用类似@import 和 url(...)的方法实现 require()的功能,
@@ -252,7 +288,6 @@ module.exports = {
                   loader: 'less-loader',
                   options: {
                       sourceMap: false,
-                      include: paths.appSrc,
                   },
               },
           ],

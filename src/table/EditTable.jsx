@@ -28,6 +28,12 @@ export default class EditTable extends Component {
             classNameArr.push(className);
         });
         Pubsub.publish('test',{name: '我是Pubsub.publish发布的消息'});
+
+        const $div = document.getElementById('header');
+        console.log(8888888, $div.offsetTop);
+        if ($div.offsetTop === 0) {
+            $div.style.position = 'fixed';
+        }
     }
 
     onCellChange = (index, key) => {
@@ -152,6 +158,9 @@ export default class EditTable extends Component {
                 >
                     <JsTable/>
                 </Card>
+                <div id="header">
+                    <h2>header</h2>
+                </div>
                 <Card
                     style={{marginTop: '20px'}}
                     title="antd中可折叠的表格"

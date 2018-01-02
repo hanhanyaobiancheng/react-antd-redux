@@ -21,7 +21,10 @@ export default class Home extends Component {
             <div>
                 <div className={styles.root}>
                     <div className={styles.content} onClick={this.handleTitleClick}>
-                        <Card>
+                        <Card
+                            hoverable
+                            style={{ width: 240 }}
+                        >
                             <a href="/">blog</a>
                         </Card>
                     </div>
