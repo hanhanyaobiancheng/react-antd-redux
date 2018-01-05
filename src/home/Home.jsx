@@ -11,19 +11,13 @@ export default class Home extends Component {
     state = {};
 
     componentDidMount() {
-        const rootDom = document.getElementById('root');
         const backPicUrl = [a, b];
         // const backPicUrl = ['../home/1514430994794.jpg', './1514431050389.jpg'];
 
-        if (rootDom) {
-            setInterval(() => {
-                const num = getRangeNum(0, 1);
-                this.setState({imgUrl: backPicUrl[num]});
-                // TODO webpack打包html中的背景图片的问题
-                rootDom.style.background = `url(${backPicUrl[1]}) no-repeat`;
-                // console.log(6666, num);
-                }, 5000)
-        }
+        setInterval(() => {
+            const num = getRangeNum(0, 1);
+            this.setState({imgUrl: backPicUrl[num]});
+            }, 5000)
     }
 
 
@@ -40,8 +34,8 @@ export default class Home extends Component {
         const {imgUrl} = this.state;
         return (
             <div>
-                <div className={styles.root} id="root">
-                    <img src={imgUrl} alt="" className={styles.backImg}/>
+                <div className={styles.root} id="home" style={{backgroundImage: `url(${imgUrl})`}}>
+                    {/*<img src={imgUrl} alt="" className={styles.backImg}/>*/}
                     <div className={styles.content} onClick={this.handleTitleClick}>
                         <Card
                             hoverable
