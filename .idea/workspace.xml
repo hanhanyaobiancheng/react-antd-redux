@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fd98c95-854a-43ca-b608-858c1c9fc84f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/123123123.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/efesfse.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/sfggffg.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg (4).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg (5).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg (6).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg (7).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg (8).jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/home/timg.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home/Home.jsx" afterPath="$PROJECT_DIR$/src/home/Home.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home/home.less" afterPath="$PROJECT_DIR$/src/home/home.less" />
@@ -26,7 +35,7 @@
       <file leaf-file-name="webpack.config.dev.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7080">
+            <state relative-caret-position="0">
               <caret line="236" column="37" lean-forward="false" selection-start-line="236" selection-start-column="37" selection-end-line="236" selection-end-column="37" />
               <folding />
             </state>
@@ -36,7 +45,7 @@
       <file leaf-file-name="AddTodoList.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/todoList/container/AddTodoList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1200">
+            <state relative-caret-position="0">
               <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
               <folding />
             </state>
@@ -46,7 +55,7 @@
       <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="0">
               <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
               <folding />
             </state>
@@ -56,7 +65,7 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="0">
               <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
@@ -68,7 +77,7 @@
       <file leaf-file-name="FilterLink.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/todoList/container/FilterLink.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
+            <state relative-caret-position="0">
               <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
@@ -77,17 +86,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/home/Home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+            <state relative-caret-position="450">
+              <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1515374695980" expanded="true" signature="1037:1597" ph="..." />
-                <marker date="1515374695980" expanded="true" signature="1137:1578" ph="..." />
-                <marker date="1515374695980" expanded="true" signature="1302:1555" ph="..." />
-                <marker date="1515374695980" expanded="true" signature="1333:1528" ph="..." />
+                <marker date="1515407660304" expanded="true" signature="1348:1908" ph="..." />
+                <marker date="1515407660304" expanded="true" signature="1448:1889" ph="..." />
+                <marker date="1515407660304" expanded="true" signature="1613:1866" ph="..." />
+                <marker date="1515407660304" expanded="true" signature="1644:1839" ph="..." />
               </folding>
             </state>
           </provider>
@@ -107,11 +116,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/home/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            <state relative-caret-position="318">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -120,7 +129,7 @@
       <file leaf-file-name="commonFunctions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/commons/commonFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="0">
               <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
               <folding />
             </state>
@@ -190,8 +199,8 @@
         <option value="$PROJECT_DIR$/src/redux/reducers/moke-reducers/visibilityFilter.js" />
         <option value="$PROJECT_DIR$/src/todoList/container/FilterLink.js" />
         <option value="$PROJECT_DIR$/src/commons/commonFunctions.js" />
-        <option value="$PROJECT_DIR$/src/home/home.less" />
         <option value="$PROJECT_DIR$/src/home/Home.jsx" />
+        <option value="$PROJECT_DIR$/src/home/home.less" />
       </list>
     </option>
   </component>
@@ -295,6 +304,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-antd-redux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="react-antd-redux" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -307,6 +334,11 @@
     <property name="SearchEverywhereHistoryKey" value=".babelrc&#9;null&#9;null" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/node_modules/babel-core/lib/transformation/file/options/config.js" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workSpace\react-app\react-antd-redux\src\home" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -497,12 +529,12 @@
       <workItem from="1514942510723" duration="3077000" />
       <workItem from="1515031088944" duration="2173000" />
       <workItem from="1515116352474" duration="16231000" />
-      <workItem from="1515374387568" duration="354000" />
+      <workItem from="1515374387568" duration="1517000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="366719000" />
+    <option name="totallyTimeSpent" value="367882000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,7 +899,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todoList/container/FilterLink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
+        <state relative-caret-position="0">
           <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
@@ -877,7 +909,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/todoList/container/AddTodoList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
+        <state relative-caret-position="0">
           <caret line="43" column="38" lean-forward="false" selection-start-line="43" selection-start-column="38" selection-end-line="43" selection-end-column="38" />
           <folding />
         </state>
@@ -885,7 +917,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpack.config.dev.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7080">
+        <state relative-caret-position="0">
           <caret line="236" column="37" lean-forward="false" selection-start-line="236" selection-start-column="37" selection-end-line="236" selection-end-column="37" />
           <folding />
         </state>
@@ -898,7 +930,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/commons/commonFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="0">
           <caret line="16" column="51" lean-forward="false" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
           <folding />
         </state>
@@ -906,7 +938,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="0">
           <caret line="1" column="34" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="34" />
           <folding />
         </state>
@@ -914,7 +946,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="0">
           <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
@@ -922,25 +954,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/home.less">
+    <entry file="file://$PROJECT_DIR$/src/home/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="13" column="29" lean-forward="false" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="450">
+          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <marker date="1515407660304" expanded="true" signature="1348:1908" ph="..." />
+            <marker date="1515407660304" expanded="true" signature="1448:1889" ph="..." />
+            <marker date="1515407660304" expanded="true" signature="1613:1866" ph="..." />
+            <marker date="1515407660304" expanded="true" signature="1644:1839" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/home/Home.jsx">
+    <entry file="file://$PROJECT_DIR$/src/home/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="18" lean-forward="false" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <marker date="1515374695980" expanded="true" signature="1037:1597" ph="..." />
-            <marker date="1515374695980" expanded="true" signature="1137:1578" ph="..." />
-            <marker date="1515374695980" expanded="true" signature="1302:1555" ph="..." />
-            <marker date="1515374695980" expanded="true" signature="1333:1528" ph="..." />
-          </folding>
+        <state relative-caret-position="318">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>

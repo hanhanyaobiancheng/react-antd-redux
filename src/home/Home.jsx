@@ -5,6 +5,15 @@ import {setCurrentUser, getRangeNum} from '../commons/commonFunctions';
 import styles from  './home.less';
 import a from '../home/1514430994794.jpg';
 import b from './1514431050389.jpg';
+import c from './123123123.jpg';
+import d from './efesfse.jpg';
+import e from './sfggffg.jpg';
+import f from './timg.jpg';
+import g from './timg (4).jpg';
+import h from './timg (5).jpg';
+import i from './timg (6).jpg';
+import j from './timg (7).jpg';
+import k from './timg (8).jpg';
 
 
 export default class Home extends Component {
@@ -13,13 +22,13 @@ export default class Home extends Component {
     };
 
     componentDidMount() {
-        const backPicUrl = [a, b];
+        const backPicUrl = [a, b, c, d, e, f, g, h, i, j, k];
         // const backPicUrl = ['../home/1514430994794.jpg', './1514431050389.jpg'];
 
         setInterval(() => {
-            const num = getRangeNum(0, 1);
+            const num = getRangeNum(0, 10);
             this.setState({imgUrl: backPicUrl[num]});
-            }, 5000)
+            }, 2000)
     }
 
 
