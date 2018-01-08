@@ -8,7 +8,9 @@ import b from './1514431050389.jpg';
 
 
 export default class Home extends Component {
-    state = {};
+    state = {
+        imgUrl: a,
+    };
 
     componentDidMount() {
         const backPicUrl = [a, b];
