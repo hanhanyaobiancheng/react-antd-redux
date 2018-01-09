@@ -28,7 +28,7 @@ export default class Home extends Component {
         setInterval(() => {
             const num = getRangeNum(0, 10);
             this.setState({imgUrl: backPicUrl[num]});
-            }, 2000)
+            }, 5000)
     }
 
 
