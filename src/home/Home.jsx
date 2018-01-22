@@ -29,7 +29,7 @@ export default class Home extends Component {
 
         setInterval(() => {
             // const num = getRangeNum(0, 10);
-            console.log(this.pictureIndex);
+            // console.log(this.pictureIndex);
             if (this.pictureIndex > 10) {
                 this.pictureIndex = 0;
             }

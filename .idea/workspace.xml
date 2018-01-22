@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fd98c95-854a-43ca-b608-858c1c9fc84f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/home/Home.jsx" afterPath="$PROJECT_DIR$/src/home/Home.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/home/timg (4).jpg" afterPath="$PROJECT_DIR$/src/home/timg4.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/home/timg (5).jpg" afterPath="$PROJECT_DIR$/src/home/timg5.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/home/timg (6).jpg" afterPath="$PROJECT_DIR$/src/home/timg6.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/home/timg (7).jpg" afterPath="$PROJECT_DIR$/src/home/timg7.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/home/timg (8).jpg" afterPath="$PROJECT_DIR$/src/home/timg8.jpg" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,14 +36,14 @@
       <file leaf-file-name="Home.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/home/Home.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+            <state relative-caret-position="60">
+              <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1516600834512" expanded="true" signature="1502:2062" ph="..." />
-                <marker date="1516600834512" expanded="true" signature="1602:2043" ph="..." />
-                <marker date="1516600834512" expanded="true" signature="1767:2020" ph="..." />
-                <marker date="1516600834512" expanded="true" signature="1798:1993" ph="..." />
+                <marker date="1516609751569" expanded="true" signature="1505:2065" ph="..." />
+                <marker date="1516609751569" expanded="true" signature="1605:2046" ph="..." />
+                <marker date="1516609751569" expanded="true" signature="1770:2023" ph="..." />
+                <marker date="1516609751569" expanded="true" signature="1801:1996" ph="..." />
               </folding>
             </state>
           </provider>
@@ -513,12 +507,12 @@
       <workItem from="1515633516559" duration="608000" />
       <workItem from="1515720448560" duration="659000" />
       <workItem from="1515735726940" duration="17000" />
-      <workItem from="1516592495775" duration="4058000" />
+      <workItem from="1516592495775" duration="5879000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="375618000" />
+    <option name="totallyTimeSpent" value="377439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -538,9 +532,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3716518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3716518" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23188406" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23102678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17917548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -933,14 +927,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/home/Home.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="37" column="16" lean-forward="false" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="60">
+          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1516600834512" expanded="true" signature="1502:2062" ph="..." />
-            <marker date="1516600834512" expanded="true" signature="1602:2043" ph="..." />
-            <marker date="1516600834512" expanded="true" signature="1767:2020" ph="..." />
-            <marker date="1516600834512" expanded="true" signature="1798:1993" ph="..." />
+            <marker date="1516609751569" expanded="true" signature="1505:2065" ph="..." />
+            <marker date="1516609751569" expanded="true" signature="1605:2046" ph="..." />
+            <marker date="1516609751569" expanded="true" signature="1770:2023" ph="..." />
+            <marker date="1516609751569" expanded="true" signature="1801:1996" ph="..." />
           </folding>
         </state>
       </provider>
