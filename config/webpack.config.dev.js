@@ -156,6 +156,20 @@ module.exports = {
         ],
         include: paths.appSrc,
       },
+        {
+            test: /\.(js|jsx)$/,
+            enforce: 'pre',
+            use: [
+                {
+                    options: {
+                        formatter: eslintFormatter,
+
+                    },
+                    loader: require.resolve('eslint-loader'),
+                },
+            ],
+            include: path.appNodeSrc,
+        },
       // ** ADDING/UPDATING LOADERS **
       // The "file" loader handles all assets unless explicitly excluded.
       // The `exclude` list *must* be updated with every change to loader extensions.
@@ -206,6 +220,18 @@ module.exports = {
           cacheDirectory: true,
         },
       },
+        {
+            test: /\.(js|jsx)$/,
+            include: paths.appNodeSrc,
+            loader: require.resolve('babel-loader'),
+            options: {
+
+                // This is a feature of `babel-loader` for webpack (not Babel itself).
+                // It enables caching results in ./node_modules/.cache/babel-loader/
+                // directory for faster rebuilds.
+                cacheDirectory: true,
+            },
+        },
         {
             test: /\.less/,
             exclude: paths.appSrc,

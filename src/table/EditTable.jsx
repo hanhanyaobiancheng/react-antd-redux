@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Table, Popconfirm, Button, Card} from 'antd';
+import {TablePro} from 'kaidiya-web/antd/Table';
 import EditTableCell from './EditTableCell';
 import {SimpleHoc} from '../form/SimpleHoc';
 import TestArrangeModal from './TestArrangeModal';
@@ -167,6 +168,14 @@ export default class EditTable extends Component {
                 >
                     <AccountDetail/>
                 </Card>
+                <TablePro
+                    columns={[
+                        {title: '头部', dataIndex: 'head'},
+                        {title: '头部', dataIndex: 'head1'},
+                        {title: '头部', dataIndex: 'head2'},
+                        {title: '头部', dataIndex: 'head3'},
+                    ]}
+                />
             </div>
         );
     }
