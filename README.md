@@ -31,8 +31,8 @@ yarn build
 > **Description**
 
 ```bash
-1. I forget to add the profile .idea and yarn.lock to the gitignore, and finally push then to the github,you don't need
-   to pay attention to this.
+1. I forget to add the profile .idea and yarn.lock to the gitignore, and finally push then to the github,you don't
+   need to pay attention to this.
 2. Using npm instead of yarn to run this project is OK,the version of node should >7
 ```
 
