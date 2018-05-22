@@ -11,7 +11,10 @@
     "babel-jest": "20.0.3",
     "babel-loader": "7.0.0",
     "babel-plugin-transform-decorators": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^3.0.1",
+    "babel-preset-stage-0": "^6.24.1",
     "babel-runtime": "6.23.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "^2.1.0",
@@ -38,6 +41,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "object-assign": "4.1.1",
+    "pms-tookit": "^0.0.8",
     "postcss-flexbugs-fixes": "3.0.0",
     "postcss-loader": "2.0.6",
     "promise": "7.1.1",
@@ -97,18 +101,37 @@
   },
   "babel": {
     "presets": [
-      "react-app"
+      "react-app",
+      [
+        "env",
+        {
+          "targets": {
+            "chrome": 52,
+            "browsers": [
+              ">1%",
+              "last 4 versions",
+              "Firefox ESR",
+              "not ie < 9"
+            ]
+          },
+          "modules": false,
+          "loose": true
+        }
+      ],
+      "es2015",
+      "stage-0",
+      "react"
     ],
     "plugins": [
+      "syntax-dynamic-import",
+      "syntax-export-extensions",
+      "transform-decorators-legacy",
       [
         "import",
         {
           "libraryName": "antd",
           "style": true
         }
-      ],
-      [
-        "transform-decorators-legacy"
       ]
     ]
   },
@@ -117,6 +140,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.3.1",
+    "babel-plugin-syntax-export-extensions": "^6.13.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4"
   }
 }

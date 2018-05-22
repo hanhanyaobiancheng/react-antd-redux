@@ -52,6 +52,7 @@ module.exports = {
   testsSetup: resolveApp('src/setupTests.js'),
   appNodeModules: resolveApp('node_modules'),
   appNodeSrc: resolveApp('node_modules/kaidiya-web/antd'),
+  appToolkitSrc: resolveApp('node_modules/pms-tookit'),
   publicUrl: getPublicUrl(resolveApp('package.json')),
   servedPath: getServedPath(resolveApp('package.json')),
 };
