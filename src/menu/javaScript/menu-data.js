@@ -4,6 +4,8 @@ import EditTable from '../../table/EditTable';
 import ReactDomEvent from '../../react/react-ref'
 import AntdForm from '../../form/form';
 import TodoList from '../../todoList/TodoList';
+import Container from '../../react-dnd/dustbin/Container';
+import Sortable from '../../react-dnd/sortable/Container';
 
 export const menuData = [
     {
@@ -52,6 +54,20 @@ export const menuData = [
                 path: '/moke-todolist',
                 icon: 'setting',
                 component: TodoList,
+            },
+            {
+                key: '1-7',
+                icon: 'setting',
+                title: 'react-dnd',
+                path: '/react-dnd',
+                component: Container,
+            },
+            {
+                key: '1-8',
+                icon: 'setting',
+                title: 'react-dnd-sortable',
+                path: '/react-dnd-sortable',
+                component: Sortable,
             },
         ]
     },
