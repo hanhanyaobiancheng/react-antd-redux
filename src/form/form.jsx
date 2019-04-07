@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import moment from 'moment';
 import {Form, DatePicker, TimePicker, Input, Row, Col, Tabs, Button} from 'antd';
 import './style.less';
-import FormItemLayout from 'pms-tookit/antd/form-item-layout/FormItemLayout';
+
 const FormItem = Form.Item;
 const {TabPane} = Tabs;
 
@@ -201,14 +201,6 @@ export default class AntdForm extends Component {
                         </TabPane>
                     </Tabs>
                 </Form>
-                <div>
-                    <FormItemLayout
-                        label="试试"
-                        labelTextAlign="right"
-                    >
-                        <Input placeholder="填一个试试"/>
-                    </FormItemLayout>
-                </div>
                 <div className="button">
                     <Button
                         loading={loading}

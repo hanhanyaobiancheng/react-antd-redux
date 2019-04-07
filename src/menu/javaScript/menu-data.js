@@ -6,6 +6,8 @@ import AntdForm from '../../form/form';
 import TodoList from '../../todoList/TodoList';
 import Container from '../../react-dnd/dustbin/Container';
 import Sortable from '../../react-dnd/sortable/Container';
+import HandleData from '../../handle-data/index';
+import Index from "../../css-style/linear-background";
 
 export const menuData = [
     {
@@ -71,4 +73,31 @@ export const menuData = [
             },
         ]
     },
+    {
+        key: '2',
+        title: '数据处理',
+        icon: 'mail',
+        children: [
+            {
+                key: '2-1',
+                title: '数据处理',
+                path: '/huaKeLi',
+                icon: 'setting',
+                component: HandleData,
+            },
+        ],
+    },
+    {
+        key: '3',
+        title: 'css样式效果',
+        icon: '',
+        children: [
+            {
+                key: '2.1',
+                title: '渐变背景',
+                path: '/linear-background',
+                component: Index,
+            }
+        ],
+    }
 ];
